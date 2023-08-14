@@ -1,0 +1,26 @@
+.white-button {
+  color: white;
+}
+
+.highlight {
+
+  color: white;
+  padding: 5px;
+}
+
+dark-background {
+  background-color: #dc1e1e;
+  /* Replace with your desired dark background color */
+}
+.nav-item {
+  margin-right: 10px; /* Adjust the margin value to your desired gap size */
+}
+
+.search-input::placeholder {
+  color: black;
+}
+
+
+
+
+

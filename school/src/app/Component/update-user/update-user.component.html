@@ -1,0 +1,63 @@
+<div class="container">
+    <h1 style="color:red">Update User</h1>
+    <form #userlogin="ngForm" (ngSubmit)="userRegister(userlogin.value)">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">UserName</label>
+                <input type="text" class="form-control" id="username" name="username" [ngModel]="user.username">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" [ngModel]="user.email" placeholder="abc@xyz.com">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" [ngModel]="user.firstName">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Middle Name</label>
+                <input type="text" class="form-control" id="middlename" name="middlename" [ngModel]="user.middlename">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" [ngModel]="user.lastname">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" name="password" [ngModel]="user.password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" [ngModel]="user.dob">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Mobile No.</label>
+                <input type="number" class="form-control" id="mobilenumber" name="mobilenumber" [ngModel]="user.mobilenumber">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-control" id="gender" name="gender" [ngModel]="user.gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Role</label>
+                <select class="form-control" id="role" name="role" [ngModel]="user.role">
+                    <option value="Student">Student</option>
+                    <option value="Teacher">Teacher</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

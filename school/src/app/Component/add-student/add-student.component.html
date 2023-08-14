@@ -1,0 +1,60 @@
+<div class="container col-md-6">
+  <h1 style="color: red">Add Student</h1>
+  <form [formGroup]="studentForm" (ngSubmit)="addStudent()">
+    <div class="mb-3">
+      <label class="form-label">First Name</label>
+      <input type="text" class="form-control" id="first_name" formControlName="first_name">
+      <div *ngIf="studentForm.controls['first_name'].invalid && studentForm.controls['first_name'].touched" class="text-danger">
+        First Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="last_name" formControlName="last_name">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div *ngIf="studentForm.controls['email'].invalid && studentForm.controls['email'].touched" class="text-danger">
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" formControlName="username">
+      <div *ngIf="studentForm.controls['username'].invalid && studentForm.controls['username'].touched" class="text-danger">
+        Username is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Class</label>
+      <select class="form-control" id="classname" formControlName="classname">
+        <option value="">Select Class</option>
+        <option value="1">Class 1</option>
+        <option value="2">Class 2</option>
+        <option value="3">Class 4</option>
+        <option value="3">Class 5</option>
+        <option value="3">Class 6</option>
+        <option value="3">Class 7</option>
+        <option value="3">Class 8</option>
+        <option value="3">Class 9</option>
+        <option value="3">Class 10</option>
+        <option value="3">Class 11</option>
+        <option value="3">Class 12</option>
+      </select>
+      <div *ngIf="studentForm.controls['classname'].invalid && studentForm.controls['classname'].touched" class="text-danger">
+        Class is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Upload Image</label>
+      <input type="file" class="form-control" id="fileName" formControlName="fileName" accept=".png, .jpg" (change)="onChange($event)">
+      <div *ngIf="studentForm.controls['fileName'].invalid && studentForm.controls['fileName'].touched" class="text-danger">
+        Please upload an image file.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Add</button>
+    <span style="margin-left: 10px;"></span>
+    <button type="button" class="btn btn-secondary" (click)="clearForm()">Clear</button>
+  </form>
+</div>

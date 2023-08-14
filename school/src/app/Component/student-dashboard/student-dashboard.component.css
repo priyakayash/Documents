@@ -1,0 +1,26 @@
+
+.space-buttons {
+  flex: 1 1 auto;
+}
+
+.left-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  height: 100vh;
+  padding-left: 20px; /* Optional: Add padding for left alignment */
+}
+
+.student-details {
+  text-align: left;
+}
+
+/* Optional: Customize the student details styles */
+.student-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.student-details p {
+  margin: 5px 0;
+}

@@ -1,0 +1,20 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .student-details {
+    border: 1px solid #000; /* Add border styles */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .student-details p {
+    border-bottom: 1px solid #000; /* Add border styles to each <p> element */
+    padding-bottom: 10px; /* Add spacing between each property */
+  }
+
+  .space-buttons {
+    flex: 1 1 auto;
+}

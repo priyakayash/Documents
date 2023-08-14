@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #795fcd;">
+  <div class="container-fluid">
+    <a class="navbar-brand highlight">School management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 dark-background">
+        <li class="nav-item">
+          <button mat-button routerLink="/user" class="white-button">Add User</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button routerLink="/student" class="white-button">Add Student</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button routerLink="/teacher" class="white-button">Add Teacher</button>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <input class="form-control form-control-sm me-2 search-input" type="search" placeholder="Search" aria-label="Search"
+          [(ngModel)]="searchQuery">
+        <button class="btn btn-outline-success btn-sm btn-primary" (click)="searchUser(searchQuery)">Search</button>
+      </div>
+
+      <ul>
+        <li class="nav-item">
+          <button mat-button routerLink="/" class="white-button">
+            <mat-icon>logout</mat-icon>
+           
+          </button>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>

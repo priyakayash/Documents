@@ -1,0 +1,52 @@
+<div class="container col-md-6">
+    <h1 style="color:red">Add Teacher</h1>
+    <form [formGroup]="teacherForm" (ngSubmit)="addTeacher()">
+      <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" formControlName="first_name">
+        <div *ngIf="teacherForm.controls['first_name'].invalid && teacherForm.controls['first_name'].touched"
+          class="text-danger">First Name is required</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-control" formControlName="last_name">
+        <div *ngIf="teacherForm.controls['last_name'].invalid && teacherForm.controls['last_name'].touched"
+          class="text-danger">Last Name is required</div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="abc@xyz.com">
+        <div *ngIf="teacherForm.controls['email'].invalid && teacherForm.controls['email'].touched"
+          class="text-danger">Invalid email format</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">UserName</label>
+        <input type="text" class="form-control" formControlName="username">
+        <div *ngIf="teacherForm.controls['username'].invalid && teacherForm.controls['username'].touched"
+          class="text-danger">Username is required</div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" formControlName="dob">
+        <div *ngIf="teacherForm.controls['dob'].invalid && teacherForm.controls['dob'].touched"
+          class="text-danger">Date of Birth is required</div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select class="form-control" formControlName="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div *ngIf="teacherForm.controls['gender'].invalid && teacherForm.controls['gender'].touched"
+          class="text-danger">Gender is required</div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="teacherForm.invalid">Add</button>
+      <span style="margin-left: 10px;"></span>
+    </form>
+  </div>
+  

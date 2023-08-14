@@ -1,0 +1,79 @@
+<div class="container col-md-6">
+    <h1 style="color: red">Add User</h1>
+    <form [formGroup]="userForm" (ngSubmit)="userRegister()">
+      <div class="mb-3">
+        <label class="form-label">UserName</label>
+        <input type="text" class="form-control" id="username" formControlName="username">
+        <div *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].touched" class="text-danger">
+          Username is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email" placeholder="abc@xyz.com">
+        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="text-danger">
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+        <div *ngIf="userForm.controls['firstName'].invalid && userForm.controls['firstName'].touched"
+          class="text-danger">
+          First Name is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Middle Name</label>
+        <input type="text" class="form-control" id="middlename" formControlName="middlename">
+        <div *ngIf="userForm.controls['middlename'].invalid && userForm.controls['middlename'].touched"
+          class="text-danger">
+          Middle Name is required.
+        </div>
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastname" formControlName="lastname">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <div *ngIf="userForm.controls['password'].invalid && userForm.controls['password'].touched" class="text-danger">
+          Password is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="dob" formControlName="dob">
+        <div *ngIf="userForm.controls['dob'].invalid && userForm.controls['dob'].touched" class="text-danger">
+          Date of Birth is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mobile No.</label>
+        <input type="number" class="form-control" id="mobilenumber" formControlName="mobilenumber">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select class="form-control" id="gender" formControlName="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Role</label>
+        <select class="form-control" id="role" formControlName="role">
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Add</button>
+      <span style="margin-left: 10px;"></span>
+      <button type="button" class="btn btn-secondary" (click)="clearForm()">Clear</button>
+    </form>
+  </div>
+  
+
+ 
